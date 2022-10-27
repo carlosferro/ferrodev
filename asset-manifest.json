@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ferrodev/static/css/main.073c9b0a.css",
-    "main.js": "/ferrodev/static/js/main.183dcd9f.js",
+    "main.js": "/ferrodev/static/js/main.794a0770.js",
     "static/js/787.33d4f2d7.chunk.js": "/ferrodev/static/js/787.33d4f2d7.chunk.js",
     "index.html": "/ferrodev/index.html",
     "main.073c9b0a.css.map": "/ferrodev/static/css/main.073c9b0a.css.map",
-    "main.183dcd9f.js.map": "/ferrodev/static/js/main.183dcd9f.js.map",
+    "main.794a0770.js.map": "/ferrodev/static/js/main.794a0770.js.map",
     "787.33d4f2d7.chunk.js.map": "/ferrodev/static/js/787.33d4f2d7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.183dcd9f.js"
+    "static/js/main.794a0770.js"
   ]
 }
