@@ -2,7 +2,7 @@ export const navbarItems = [
     {
         id: 0,
         label: 'Home',
-        route: 'home'
+        route: '/'
     },
     {
         id: 1,

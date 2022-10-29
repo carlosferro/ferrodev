@@ -1,10 +1,13 @@
-import './App.css';
-import NavBar from './components/AppBar/NavBar';
+import { Box, Grid } from "@mui/material";
+import { Outlet } from "react-router-dom";
+import "./App.css";
+import NavBar from "./components/AppBar/NavBar";
 
 function App() {
   return (
-    <NavBar>
-    </NavBar>
+    <Box container>
+      <Outlet />
+    </Box>
   );
 }
 
