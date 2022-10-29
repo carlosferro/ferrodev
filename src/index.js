@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Portfolio from "./pages/Portfolio/Portfolio";
@@ -15,9 +14,9 @@ root.render(
     <BrowserRouter>
       <NavBar />
       <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Portfolio" element={<Portfolio />} />
-          <Route path="/About" element={<About />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

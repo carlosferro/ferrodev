@@ -13,6 +13,7 @@ const NavBar = () => {
         <Toolbar>
           {navbarItems.map((item) => (
             <MenuItem key={item.id} onClick={() => navigate(item.route)}>
+              {item.icon}
               <Typography variant="h6">{item.label}</Typography>
             </MenuItem>
           ))}

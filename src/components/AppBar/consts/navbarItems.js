@@ -1,7 +1,9 @@
+import HomeIcon from '@mui/icons-material/Home';
+
 export const navbarItems = [
     {
         id: 0,
-        label: 'Home',
+        icon: <HomeIcon />,
         route: '/'
     },
     {
