@@ -1,11 +1,13 @@
-import React from 'react';
+import { Box, Grid } from "@mui/material";
+import React from "react";
+import InitialCard from "../../components/InitialCard/InitialCard";
 
 const Home = () => {
-    return (
-        <div>
-            Home
-        </div>
-    );
+  return (
+    <Box display="flex" justifyContent="center">
+      <InitialCard />
+    </Box>
+  );
 };
 
 export default Home;

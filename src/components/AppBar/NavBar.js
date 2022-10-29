@@ -8,7 +8,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <Box>
+    <Box sx={{ paddingBottom: 2 }}>
       <AppBar position="static">
         <Toolbar>
           {navbarItems.map((item) => (
