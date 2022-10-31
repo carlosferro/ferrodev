@@ -4,7 +4,7 @@ import InitialCard from "../../components/InitialCard/InitialCard";
 
 const Home = () => {
   return (
-    <Box display="flex" justifyContent="center">
+    <Box display="flex" justifyContent="center" sx={{padding: 2}}>
       <InitialCard />
     </Box>
   );

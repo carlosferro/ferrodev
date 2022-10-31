@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import BasicCard from "../../components/commom/BasicCard/BasicCard";
 import { portfolioItems } from "./portfolioItems";
@@ -16,16 +16,21 @@ const Portfolio = () => {
   );
 
   return (
-    <Grid container>
+    <Grid container display="flex" justifyContent="center">
       {portfolioItems.map((item) => (
-        <BasicCard
-          sx={{ maxWidth: 345, paddingLeft: "20px", paddingRight: "20px" }}
-          component="img"
-          height={140}
-          image={item.image}
-          alt={item.alt}
-          content={getContent(item.title, item.text)}
-        />
+        <Box sx={{ padding: 2}}>
+          <BasicCard
+            sx={{ maxWidth: 345 }}
+            component="img"
+            height={300}
+            image={item.image}
+            alt={item.alt}
+            content={getContent(item.title, item.text)}
+            to={`${item.id}`}
+            href={item.href}
+            hrefText={item.hrefText}
+          />
+        </Box>
       ))}
     </Grid>
   );

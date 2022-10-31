@@ -13,6 +13,11 @@ export const navbarItems = [
     },
     {
         id: 2,
+        label: 'Tutorials',
+        route: 'tutorials'
+    },
+    {
+        id: 3,
         label: 'About',
         route: 'about'
     }

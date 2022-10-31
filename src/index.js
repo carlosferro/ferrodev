@@ -7,6 +7,8 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import NavBar from "./components/AppBar/NavBar";
+import Bitstamp from "./pages/Bitstamp/Bitstamp";
+import Tutorials from "./pages/Tutorials/Tutorials";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,8 +17,10 @@ root.render(
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Portfolio" element={<Portfolio />} />
-        <Route path="/About" element={<About />} />
+        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="portfolio/bitstamp" element={<Bitstamp />} />
+        <Route path="tutorials" element={<Tutorials />} />
+        <Route path="about" element={<About />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
