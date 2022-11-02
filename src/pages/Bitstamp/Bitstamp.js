@@ -75,14 +75,11 @@ const Bitstamp = () => {
     });
   }
 
-  const handleContract = (contract, activate) => {
+  const handleContract = (contract) => {
     const newState = contracts.map((item) => {
-      return item.name === contract ? { ...item, active: activate } : item;
+      return (item.name === contract ? { ...item, active: item.active ? false : true } : item)
     });
     setContracts(newState);
-    activate
-      ? ws.send(getSubscribeString(contract))
-      : ws.send(getUnsubscribeString(contract));
   };
 
   return (
@@ -96,9 +93,11 @@ const Bitstamp = () => {
         </Grid>
         <Grid item xs>
           <Grid container>
-            {contracts.map((contract) => (
-              <OrderBook title={contract.name}></OrderBook>
-            ))}
+            {contracts.map((contract) =>
+              contract.active ? (
+                <OrderBook title={contract.name}></OrderBook>
+              ) : null
+            )}
           </Grid>
         </Grid>
       </Grid>
