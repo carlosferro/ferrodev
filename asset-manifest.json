@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ferrodev/static/css/main.073c9b0a.css",
-    "main.js": "/ferrodev/static/js/main.794a0770.js",
-    "static/js/787.33d4f2d7.chunk.js": "/ferrodev/static/js/787.33d4f2d7.chunk.js",
-    "index.html": "/ferrodev/index.html",
-    "main.073c9b0a.css.map": "/ferrodev/static/css/main.073c9b0a.css.map",
-    "main.794a0770.js.map": "/ferrodev/static/js/main.794a0770.js.map",
-    "787.33d4f2d7.chunk.js.map": "/ferrodev/static/js/787.33d4f2d7.chunk.js.map"
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.83cdafaf.js",
+    "static/js/787.33d4f2d7.chunk.js": "/static/js/787.33d4f2d7.chunk.js",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.83cdafaf.js.map": "/static/js/main.83cdafaf.js.map",
+    "787.33d4f2d7.chunk.js.map": "/static/js/787.33d4f2d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.794a0770.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.83cdafaf.js"
   ]
 }
