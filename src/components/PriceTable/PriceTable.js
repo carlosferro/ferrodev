@@ -11,11 +11,12 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const PriceTable = ({ head, rows }) => {
+const PriceTable = ({ side, head, rows }) => {
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
       color: theme.palette.common.white,
+      overflowY: "hidden",
     },
     [`&.${tableCellClasses.body}`]: {
       fontSize: 14,
@@ -32,34 +33,25 @@ const PriceTable = ({ head, rows }) => {
     },
   }));
 
-  function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-  }
-
-//   const rows = [
-//     createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-//     createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-//     createData("Eclair", 262, 16.0, 24, 6.0),
-//     createData("Cupcake", 305, 3.7, 67, 4.3),
-//     createData("Gingerbread", 356, 16.0, 49, 3.9),
-//   ];
-
   return (
-    <TableContainer component={Paper}>
-      <Table aria-label="customized table">
+    <TableContainer sx={{ overflowY: "hidden" }} component={Paper}>
+      <Table sx={{ overflowY: "hidden" }} aria-label="customized table">
         <TableHead>
-          <TableRow>
-            {head.map((cell) => (
-              <StyledTableCell>{cell}</StyledTableCell>
-            //   <StyledTableCell align="right">Calories</StyledTableCell>
-            ))}
-          </TableRow>
+          <StyledTableCell align="center" colSpan={2}>
+            {side}
+          </StyledTableCell>
         </TableHead>
         <TableBody>
+          <StyledTableRow>
+            {head.map((cell) => (
+              <StyledTableCell align="center">{cell}</StyledTableCell>
+            ))}
+          </StyledTableRow>
           {rows.map((row, index) => (
             <StyledTableRow key={index}>
-                {row.map((column) => 
-                <StyledTableCell>{column}</StyledTableCell>)}
+              {row.map((column) => (
+                <StyledTableCell align="center">{column}</StyledTableCell>
+              ))}
             </StyledTableRow>
           ))}
         </TableBody>

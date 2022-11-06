@@ -31,10 +31,11 @@ const Bitstamp = () => {
 
           setPriceLevels((priceLevels) => {
             priceLevels[contract] = [
-              data.bids.slice(0, 10),
+              data.bids.slice(0, 10).map((x) => x.slice().reverse()),
               data.asks.slice(0, 10),
             ];
             return JSON.parse(JSON.stringify(priceLevels));
+            // return priceLevels;
           });
           break;
         }
@@ -77,7 +78,14 @@ const Bitstamp = () => {
 
   const handleContract = (contract) => {
     const newState = contracts.map((item) => {
-      return (item.name === contract ? { ...item, active: item.active ? false : true } : item)
+      if (item.name === contract) {
+        item.active
+          ? ws.send(getUnsubscribeString(item.name))
+          : ws.send(getSubscribeString(item.name));
+        return { ...item, active: item.active ? false : true };
+      } else {
+        return item;
+      }
     });
     setContracts(newState);
   };
@@ -95,7 +103,20 @@ const Bitstamp = () => {
           <Grid container>
             {contracts.map((contract) =>
               contract.active ? (
-                <OrderBook title={contract.name}></OrderBook>
+                <OrderBook
+                  sx={{ minWidth: "450px" }}
+                  title={contract.name.toUpperCase()}
+                  asks={
+                    priceLevels[contract.name]
+                      ? priceLevels[contract.name][1]
+                      : []
+                  }
+                  bids={
+                    priceLevels[contract.name]
+                      ? priceLevels[contract.name][0]
+                      : []
+                  }
+                ></OrderBook>
               ) : null
             )}
           </Grid>
