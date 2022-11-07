@@ -15,7 +15,7 @@ const OrderBook = ({ title, asks, bids, sx }) => {
         >
           {title}
         </Typography>
-        <Box container display="flex" justifyContent="center">
+        <Box container display="flex">
           <PriceTable
             side="Bid"
             head={["Volume", "Price"]}

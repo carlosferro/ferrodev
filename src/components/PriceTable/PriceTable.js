@@ -16,7 +16,6 @@ const PriceTable = ({ side, head, rows }) => {
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
       color: theme.palette.common.white,
-      overflowY: "hidden",
     },
     [`&.${tableCellClasses.body}`]: {
       fontSize: 14,
@@ -34,8 +33,8 @@ const PriceTable = ({ side, head, rows }) => {
   }));
 
   return (
-    <TableContainer sx={{ overflowY: "hidden" }} component={Paper}>
-      <Table sx={{ overflowY: "hidden" }} aria-label="customized table">
+    <TableContainer component={Paper}>
+      <Table aria-label="customized table">
         <TableHead>
           <StyledTableCell align="center" colSpan={2}>
             {side}

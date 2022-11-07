@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Hidden } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import BasicList from "../../components/commom/BasicList/BasicList";
 import OrderBook from "../../components/OrderBook/OrderBook";
@@ -104,7 +104,7 @@ const Bitstamp = () => {
             {contracts.map((contract) =>
               contract.active ? (
                 <OrderBook
-                  sx={{ minWidth: "450px" }}
+                  sx={{ minWidth: "450px", overflowY: "hidden" }}
                   title={contract.name.toUpperCase()}
                   asks={
                     priceLevels[contract.name]
